@@ -1,3 +1,4 @@
+https://edu-cloud.tech/2025/11/26/PFC5-0%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9%E6%A8%A1%E6%8B%9F%E4%BB%A3%E7%A0%81%EF%BC%88%E5%85%A8%EF%BC%89/
 https://edu-cloud.tech/2025/11/19/%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/
 https://edu-cloud.tech/2025/11/19/2025-11-19-hexo-anzhiyu-setup-detailed/
 https://edu-cloud.tech/2025/11/18/hello-world/
@@ -10,5 +11,9 @@ https://edu-cloud.tech/tags/GitHub-Pages/
 https://edu-cloud.tech/tags/Python/
 https://edu-cloud.tech/tags/NEU/
 https://edu-cloud.tech/tags/%E9%A2%84%E7%BA%A6/
+https://edu-cloud.tech/tags/PFC5-0/
+https://edu-cloud.tech/tags/%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9/
+https://edu-cloud.tech/tags/%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F/
 https://edu-cloud.tech/categories/%E6%95%99%E7%A8%8B/
 https://edu-cloud.tech/categories/%E9%A1%B9%E7%9B%AE/
+https://edu-cloud.tech/categories/%E7%A7%91%E7%A0%94%E7%AC%94%E8%AE%B0/
