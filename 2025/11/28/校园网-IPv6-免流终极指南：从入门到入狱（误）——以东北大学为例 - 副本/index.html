@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>校园网 IPv6 免流终极指南：以东北大学为例 | 防微杜渐的博客</title><meta name="keywords" content="教程,IPv6,校园网,免流,Hysteria2"><meta name="author" content="JianFang"><meta name="copyright" content="JianFang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="校园网 IPv6 免流终极指南：以东北大学为例"><meta name="application-name" content="校园网 IPv6 免流终极指南：以东北大学为例"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="校园网 IPv6 免流终极指南：以东北大学为例"><meta property="og:url" content="https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/index.html"><meta property="og:site_name" content="防微杜渐的博客"><meta property="og:description" content="校园网 IPv6 免流终极指南：从入门到入狱（误）——以东北大学为例   第一章 绪论：下一代互联网协议与校园网计费系统的博弈1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起随着全球互联网设备的爆炸式增长，互联网工程任务组（IETF）设计的第四代互联网协议（IPv4）所能提供的约 43 亿个"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://edu-cloud.tech/images/xiyangyang.png"><meta property="article:author" content="JianFang"><meta property="article:tag" content="Hexo, 博客, 技术, 笔记"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://edu-cloud.tech/images/xiyangyang.png"><meta name="description" content="校园网 IPv6 免流终极指南：从入门到入狱（误）——以东北大学为例   第一章 绪论：下一代互联网协议与校园网计费系统的博弈1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起随着全球互联网设备的爆炸式增长，互联网工程任务组（IETF）设计的第四代互联网协议（IPv4）所能提供的约 43 亿个"><link rel="shortcut icon" href="/favicon.jpg"><link rel="canonical" href="https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="VS_OL6wNx9p2pDvnlTmGHm_GNscWAHWObvvcDI7SCog"/><meta name="baidu-site-verification" content="codeva-F3qb0kaxeQ"/><meta name="msvalidate.01" content="1880D8A0526593B87CAC6F564E723DBC"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: JianFang","link":"链接: ","source":"来源: 防微杜渐的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '防微杜渐的博客',
+  title: '校园网 IPv6 免流终极指南：以东北大学为例',
+  postAI: '',
+  pageFillDescription: '第一章 绪论：下一代互联网协议与校园网计费系统的博弈, 1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起, 1.2 免流现象的产生机制：技术与政策的缝隙, 1.3 技术路线选择：为何 Hysteria 2 是终极答案？, 第二章 服务器端部署：构建基于 IPv6 的数据中枢, 2.1 服务器环境准备, 2.1.1 基础系统加固与依赖安装, 2.1.2 开启内核级网络优化, 2.2 Hysteria 2 服务端深度部署, 2.2.1 自动化安装, 2.2.2 配置文件详解与定制, 2.2.3 自签证书的生成, 2.2.4 启动服务与排错, 第三章 资源获取：DigitalOcean 与 GitHub 学生包实战教程, 3.1 GitHub Student Developer Pack 的申请攻略, 3.1.1 核心准备材料, 3.1.2 申请步骤详解, 3.2 DigitalOcean 账号注册与防封指南, 3.2.1 注册前的环境隔离, 3.2.2 注册流程与优惠码激活, 3.2.3 遭遇 Account Locked 的紧急救援, 3.3 创建 IPv6 Droplet 实操, 第四章 客户端配置：让魔法生效（以 Clash Verge Rev 为例）, 4.1 客户端架构解析：Clash Verge Rev 与 Mihomo, 4.2 安装与内核校验, 4.3 配置文件深度定制（YAML）, 4.3.1 创建配置文件, 4.3.2 完整配置代码, 4.4 关键配置项的技术逻辑, 4.4.1 fake-ip 模式的必要性, 4.4.2 up 和 down 的设置哲学, 4.4.3 端口跳跃 (Port Hopping), 第五章 进阶优化与故障排查, 5.1 常见故障自查表, 5.2 性能调优：MTU 的影响, 第六章 法律边界与安全伦理：从入门到入狱的距离, 6.1 盗窃电信服务的法律定性, 6.2 东北大学校规校纪, 6.3 安全伦理与自我保护, 6.4 结语, 引用的著作校园网免流终极指南从入门到入狱误以东北大学为例第一章绪论下一代互联网协议与校园网计费系统的博弈研究背景地址枯竭与的崛起随着全球互联网设备的爆炸式增长互联网工程任务组设计的第四代互联网协议所能提供的约亿个地址已于年正式耗尽为了维系互联网的持续发展第六代互联网协议应运而生采用位地址长度其理论地址数量高达个足以给地球上的每一粒沙子分配一个地址中国作为互联网大国在的部署上展现了国家意志中国教育和科研计算机网作为中国互联网的先驱率先建设了纯骨干网东北大学作为教育部直属的重点高校是的重要节点单位之一根据东北大学网络中心的公开技术文档该校早在年前后便开始了网络的升级改造采用了华为核心路由器和核心交换机通过协议实现了双栈接入免流现象的产生机制技术与政策的缝隙所谓的校园网免流并非通过黑客手段攻破计费系统而是利用了现阶段校园网在向过渡期间的策略性差异其核心原理主要基于以下三个维度的不对称性计费策略的不对称绝大多数高校包括东北大学的计费系统即认证授权计费主要针对流量进行计量和收费为了响应国家推进规模部署的政策号召以及鼓励师生使用资源学校通常对流量实行不计费不限速的优惠政策这构成了免流的经济基础防火墙策略的不对称网络通常部署了深度的状态防火墙和应用层网关对流量限制严格网络由于地址空间巨大防火墙策略相对宽松且为了保证协议的连通性往往默认放行流量这为基于的代理协议如提供了传输通道路由策略的不对称拥有独立的国际出口链路与电信联通等运营商的拥塞链路物理隔离这意味着链路不仅免费而且往往拥有更低的延迟和更少的丢包尤其是在访问海外学术资源时技术路线选择为何是终极答案在免流技术的发展史上曾出现过多种协议如基于端口基于等然而在当前的校园网环境下无疑是统治级的选择协议特性类协议传输层基础拥塞控制受限于系统内核自定义改进版抗丢包能力弱丢包导致重传窗口减半强恒定速率发送极强且带宽利用率更高混淆能力伪装简单的异或混淆深度混淆配置复杂度高中低格式客户端支持广泛较少逐渐普及等的核心优势在于其拥塞控制算法传统的拥塞控制如通过检测丢包来判断网络拥塞一旦检测到丢包就大幅降低发送速率而在校园网高峰期无线信道的物理丢包是常态算法不仅不降低速率反而会通过填充冗余数据包来抢占带宽这使得它在校园网这种高丢包环境下表现出惊人的稳定性第二章服务器端部署构建基于的数据中枢要实现免流必须拥有一台具备公网地址且位于校园网防火墙之外的服务器这台服务器充当了跳板的角色客户端通过免费的链路将数据发送给再通过其链路访问公网目标并将结果回传服务器环境准备本教程推荐使用作为服务器操作系统因其内核较新对和的支持更好基础系统加固与依赖安装在开始部署之前必须确保系统的基础安全和工具链完整切换到用户更新软件包列表并升级系统安装必要的工具下载版本控制编辑防火墙开启内核级网络优化虽然使用但系统内核的队列调度算法依然影响性能推荐开启调度算法编辑配置文件添加以下内容开启转发使配置生效服务端深度部署自动化安装官方提供的一键安装脚本是部署最稳妥的方式它会自动识别系统架构并配置服务安装完成后二进制文件位于配置文件位于配置文件详解与定制这是免流能否生效的核心环节我们需要配置监听地址并开启针对性的混淆策略编辑配置文件配置内容专用版监听端口配置注意同时监听和的端口端口通常是流量防火墙审查最宽松配置强制加密推荐使用自签证书配合客户端或者使用申请真实证书这里假设你已经生成了自签证书认证配置这里的用户名和密码将用于客户端连接建议设置复杂的密码防止被扫描混淆配置关键是特有的混淆协议将数据包伪装成无特征的随机流这能有效防止防火墙识别出协议头伪装配置当非流量如浏览器直接访问连接到此端口时返回伪装内容建议伪装成学校官网或常用的学术网站流量控制建议下发给客户端的参考值忽略客户端的时间差检查可选防止因客户端时间不准导致无法连接技术原理深度解析在网络中端口是兵家必争之地虽然是协议但同样运行在上将服务部署在此端口可以将免流流量伪装成正常的网页浏览流量东北大学的校园网防火墙可能具备深度包检测能力标准的协议头包含明显的特征指纹混淆通过密码派生的密钥对数据包进行全加密使其在统计学上表现为高熵的随机噪声从而绕过协议识别自签证书的生成为了快速部署我们可以生成一个有效期年的自签证书注意字段建议填写学校相关的域名以增加迷惑性启动服务与排错启动服务设置开机自启查看运行状态查看实时日志如果连接失败这是最重要的排查手段第三章资源获取与学生包实战教程本章响应用户特定需求详细讲解如何零成本获取高性能服务器对于在校学生而言购买商业是一笔不小的开支学生开发者包提供了价值美元的信用额度有效期一年这是构建免流服务器的最佳资金来源然而的风控极其严格许多学生在注册环节即遭封号本章将提供保姆级的避坑指南的申请攻略在获取优惠之前必须通过的学生身份认证核心准备材料东北大学学生邮箱必须绑定到账户学生证实体卡必须清晰可见姓名学校入学时间预计毕业时间学信网验证报告教育部学籍在线验证报告推荐英文版截图需包含验证二维码位置信息申请时设备的地址地理位置必须在沈阳最好是在校内网申请步骤详解登录访问发起申请点击身份证明上传关键点现已拒绝大多数直接上传图片的申请强烈建议使用手机浏览器访问申请页面选择实时拍摄学生证如果必须上传图片请确保图片信息完整不要使用修改填写申请理由不要写推荐范本等待审核通常由自动审核几分钟到几天不等如果失败请仔细阅读拒绝理由如图片模糊不在校区范围内并修正账号注册与防封指南获得学生包后你将获得一个专属链接或接下来的步骤是雷区的算法会对新注册账号进行严苛的欺诈检测注册前的环境隔离绝对禁止使用代理或浏览器注册必须使用真实的校园网或沈阳本地的家庭宽带浏览器指纹建议使用的无痕模式或者清除所有注册流程与优惠码激活通过链接跳转在包页面点击的链接这通常会自动带入填写注册信息姓名必须填写真实姓名的拼音且必须与后续绑定的信用卡持卡人一致不要填或网名邮箱建议直接使用授权登录或者使用学校邮箱注册支付方式验证生死攸关的一步虽然有美元额度但强制要求绑定支付方式以验证人类身份推荐方案信用卡国内银行发行的双币全币种卡招商银行中国银行的通过率较高备选方案如果使用必须先充值美元这美元是保护费能极大降低封号概率绝对禁区不要使用虚拟信用卡预付卡或以此类推的匿名支付手段这会导致账号立即被锁输入如果在注册时未自动应用进入控制面板后点击左侧菜单底部的在输入框中填写提供的代码注意优惠码必须在绑定支付方式后才能生效遭遇的紧急救援如果你刚注册完就收到的邮件不要惊慌这是风控的常见误杀错误操作重新注册一个账号这会被判定为多账号滥用导致永久封禁正确操作访问提交工单标题填写内容诚恳解释附件上传学生证照片手持身份证照片如果敢的话通常人工客服会在小时内解封创建实操账号存活后我们要创建一个支持的区域建议选择或对于用户直连美国西海岸或新加坡的速度通常都不错系统选择强烈建议使用点击将你电脑生成的内容粘贴进去这比密码安全得多也是推荐的做法关键务必勾选如果不勾选你将无法获得公网地址免流也就无从谈起点击创建稍等片刻你将获得一个地址和一个地址第四章客户端配置让魔法生效以为例客户端是用户与免流服务器交互的桥梁本章将以目前最先进的为例详细讲解如何配置协议以实现完美免流客户端架构解析与是项目的社区维护版本它本质上是一个图形用户界面底层依赖于原内核层负责界面展示配置文件的生成与管理基于框架轻量级内核层负责实际的网络连接协议解析规则匹配和流量转发重要提示只有内核才原生支持协议原版内核并不支持安装与内核校验下载访问页面用户下载用户下载文件内核设置安装后打开软件点击左侧设置找到内核选项确保当前选中的内核是通常显示为或类似字样如果不是点击右侧的下载按钮更新内核配置文件深度定制由于协议较新传统的订阅转换网站往往不支持或支持不佳最可靠的方法是手动编写本地配置文件创建配置文件点击左侧配置点击右上角新建本地文件命名为然后右键选择编辑文件完整配置代码请将以下代码完整覆盖到编辑器中并根据注释修改你的服务器信息专用配置针对东北大学环境优化混合端口同时支持和协议局域网共享允许同一局域网下的手机平板连接此电脑代理运行模式规则模式日志级别开启支持核心开关必须开启外部控制用于通信配置防泄露与解析加速的关键原理直接返回一个假的地址给浏览器后续由代理客户端在远端解析域名优势毫秒级响应彻底解决本地污染避免本地发起请求导致流量计费默认用于解析下面的域名主要走代理查询备用直连查询用于国内域名配置过滤强制国内域名走解析代理节点配置服务器地址必须用方括号包裹认证密码对应服务端混淆设置对应服务端伪装域名建议填写学校官网或者即使填错服务端若不校验也没关系证书校验如果是自签证书必须设置为指纹模拟防止被识别为非浏览器流量拥塞控制参数关键优化上行带宽建议设置为你物理网卡上限的下行带宽建议预留冗余例如百兆端口填千兆填单位必须大写应用层协议协商代理组配置路由规则东北大学校内资源直连必须精确匹配否则访问校内网也会绕地球一圈广告拦截国内流量直连为了速度使用数据库匹配常见国内域名使用数据库匹配国内也是直连私有地址兜底规则其余所有流量走代理关键配置项的技术逻辑模式的必要性在传统的模式下当你在浏览器输入时必须先在本地进行解析以获取然后根据判断是否走代理问题由于防火墙的存在本地解析往往会收到被污染的或者直接超时即使解析成功查询包本身也是包可能会产生计费流量优势直接返回一个假的如浏览器立即向这个假发起连接拦截这个连接并将域名封装在协议中发往由在海外进行真正的解析全过程在本地没有任何真实的查询流量既快又省钱和的设置哲学的算法是一种自私的算法它不关心网络是否拥塞而是试图以恒定速率填充管道设置过大如果你的物理带宽只有但你设置了会尝试发送远超物理极限的数据包导致大量丢包和重传反而降低速度甚至引起网管注意设置过小浪费了带宽最佳实践进行一次真实的测速使用校内测速站将测得带宽的填入配置文件端口跳跃如果学校防火墙对单一端口的大流量连接进行限速例如检测到端口持续小时占用可以使用端口跳跃服务端客户端注意这里是复数这会让流量在个端口之间随机跳跃防火墙很难对这种离散的流量进行聚合限速第五章进阶优化与故障排查常见故障自查表现象可能原因解决方案客户端与服务端时间不同步防火墙端口未放行路由不通校准时间误差检查测试连通性能打开但打不开百度路由规则配置错误国内流量也走了代理检查部分确保在之前速度极慢设置不合理运营商对限速调整带宽参数开启学生包申请秒拒地址地理位置不在校内关闭代理连接校园网重新申请性能调优的影响基于涉及分片问题如果你的网络环境最大传输单元较小如拨号常见而试图发送字节的包就会导致分片严重影响性能优化在的配置中如果使用模式或者在服务端配置中明确指定参数通常会自动探测但在某些极端网络下手动设置稍小的如可能会有奇效第六章法律边界与安全伦理从入门到入狱的距离本报告标题虽为戏谑但现实中免流行为确实游走在规则的边缘作为具备专业知识的大学生必须清晰认知其法律与道德风险盗窃电信服务的法律定性从法律严谨的角度看绕过计费系统使用网络资源属于以非法手段获取计算机信息系统数据或盗窃司法判例国内已有案例判决利用运营商漏洞大规模盗取流量并转售获利者触犯刑法免流盗窃校园网免流通常属于利用规则漏洞免费是学校政策而非破坏系统但如果通过此技术进行转售大规模下载导致网络瘫痪性质就会发生变化东北大学校规校纪根据东北大学校园网用户管理办法以下行为是被严格禁止的私自架设代理服务器将校内网络资源提供给校外人员使用恶意占用带宽长时间进行下载传输影响他人正常使用逃避计费利用技术手段逃避网络使用费违规者轻则封停账号通报批评重则记过处分安全伦理与自我保护数据安全自建节点如本教程所述相对安全但如果使用他人提供的免费节点你的所有流量包括教务处密码银行卡号都相当于在裸奔永远不要信任第三方免流节点适度原则技术本身无罪用它来查阅访问进行学术研究是合理的但如果用它来小时挂机下载电影不仅是对公共资源的滥用也是在挑衅网管的耐心日志审计网络中心的核心路由器具备强大的日志记录能力不要以为开启了加密混淆就彻底隐形流量特征例如某个长期保持高带宽连接本身就是最大的特征结语互联网的设计初衷是互联互通的普及本应消除的隔阂让每一个设备都能平等地对话我们在探索免流技术的过程中实际上是在通过技术手段对抗人为设置的壁垒愿每一位读者都能掌握这门技术打开通往广阔数字世界的大门更愿大家能恪守内心的准则让技术服务于成长而非沉沦本文仅供网络技术研究与学术交流使用请勿用于非法用途作者不对任何因使用本文所述技术导致的账号封禁或法律后果负责引用的著作东北大学六维空间吸引用户校园网访问时间为十一月访问时间为十一月虚空终端访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月访问时间为十一月',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-11-29 00:29:42',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">防微杜渐的博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/images/qrcode-wechat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="/images/qrcode-wechat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/qrcode-alipay.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="/images/qrcode-alipay.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anzhiyu/" style="font-size: 1.05rem;">Anzhiyu<sup>1</sup></a><a href="/tags/GitHub-Pages/" style="font-size: 1.05rem;">GitHub Pages<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Hysteria2/" style="font-size: 1.05rem;">Hysteria2<sup>1</sup></a><a href="/tags/IPv6/" style="font-size: 1.05rem;">IPv6<sup>1</sup></a><a href="/tags/NEU/" style="font-size: 1.05rem;">NEU<sup>1</sup></a><a href="/tags/PFC5-0/" style="font-size: 1.05rem;">PFC5.0<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/%E5%85%8D%E6%B5%81/" style="font-size: 1.05rem;">免流<sup>1</sup></a><a href="/tags/%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9/" style="font-size: 1.05rem;">单轴压缩<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">教程<sup>3</sup></a><a href="/tags/%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F/" style="font-size: 1.05rem;">数值模拟<sup>1</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" style="font-size: 1.05rem;">校园网<sup>1</sup></a><a href="/tags/%E9%A2%84%E7%BA%A6/" style="font-size: 1.05rem;">预约<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url">技术</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教程</span></a><a class="article-meta__tags" href="/tags/IPv6/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>IPv6</span></a><a class="article-meta__tags" href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>校园网</span></a><a class="article-meta__tags" href="/tags/%E5%85%8D%E6%B5%81/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>免流</span></a><a class="article-meta__tags" href="/tags/Hysteria2/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Hysteria2</span></a></span></div></div><h1 class="post-title" itemprop="name headline">校园网 IPv6 免流终极指南：以东北大学为例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-11-28T06:20:00.000Z" title="发表于 2025-11-28 14:20:00">2025-11-28</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-11-28T16:29:42.867Z" title="更新于 2025-11-29 00:29:42">2025-11-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">6.9k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>25分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/xiyangyang.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/"><header><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url">技术</a><a href="/tags/%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">教程</a><a href="/tags/IPv6/" tabindex="-1" itemprop="url">IPv6</a><a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" tabindex="-1" itemprop="url">校园网</a><a href="/tags/%E5%85%8D%E6%B5%81/" tabindex="-1" itemprop="url">免流</a><a href="/tags/Hysteria2/" tabindex="-1" itemprop="url">Hysteria2</a><h1 id="CrawlerTitle" itemprop="name headline">校园网 IPv6 免流终极指南：以东北大学为例</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">JianFang</span><time itemprop="dateCreated datePublished" datetime="2025-11-28T06:20:00.000Z" title="发表于 2025-11-28 14:20:00">2025-11-28</time><time itemprop="dateCreated datePublished" datetime="2025-11-28T16:29:42.867Z" title="更新于 2025-11-29 00:29:42">2025-11-29</time></header><p><strong>校园网 IPv6 免流终极指南：从入门到入狱（误）——以东北大学为例</strong></p>
+<span id="more"></span>
+
+<h2 id="第一章-绪论：下一代互联网协议与校园网计费系统的博弈"><a href="#第一章-绪论：下一代互联网协议与校园网计费系统的博弈" class="headerlink" title="第一章 绪论：下一代互联网协议与校园网计费系统的博弈"></a><strong>第一章 绪论：下一代互联网协议与校园网计费系统的博弈</strong></h2><h3 id="1-1-研究背景：IPv4-地址枯竭与-IPv6-的崛起"><a href="#1-1-研究背景：IPv4-地址枯竭与-IPv6-的崛起" class="headerlink" title="1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起"></a><strong>1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起</strong></h3><p>随着全球互联网设备的爆炸式增长，互联网工程任务组（IETF）设计的第四代互联网协议（IPv4）所能提供的约 43 亿个地址已于 2011 年正式耗尽。为了维系互联网的持续发展，第六代互联网协议（IPv6）应运而生。IPv6 采用 128 位地址长度，其理论地址数量高达 $3.4 \times 10^{38}$ 个，足以“给地球上的每一粒沙子分配一个 IP 地址”。</p>
+<p>中国作为互联网大国，在 IPv6 的部署上展现了国家意志。中国教育和科研计算机网（CERNET）作为中国互联网的先驱，率先建设了纯 IPv6 骨干网——CERNET2。东北大学（Northeastern University, NEU）作为教育部直属的重点高校，是 CERNET2 的重要节点单位之一。根据东北大学网络中心的公开技术文档，该校早在 2010 年前后便开始了 IPv6 网络的升级改造，采用了华为 NE40 核心路由器和 S8512 核心交换机，通过 BGP4+ 协议实现了 IPv4&#x2F;IPv6 双栈接入 [1]。</p>
+<h3 id="1-2-“免流”现象的产生机制：技术与政策的缝隙"><a href="#1-2-“免流”现象的产生机制：技术与政策的缝隙" class="headerlink" title="1.2 “免流”现象的产生机制：技术与政策的缝隙"></a><strong>1.2 “免流”现象的产生机制：技术与政策的缝隙</strong></h3><p>所谓的“校园网免流”，并非通过黑客手段攻破计费系统，而是利用了现阶段校园网在 IPv4 向 IPv6 过渡期间的策略性差异。其核心原理主要基于以下三个维度的不对称性：</p>
+<ol>
+<li><strong>计费策略的不对称</strong>：  <ul>
+<li>绝大多数高校（包括东北大学）的计费系统（AAA，即认证、授权、计费）主要针对 IPv4 流量进行计量和收费。  </li>
+<li>为了响应国家推进 IPv6 规模部署的政策号召，以及鼓励师生使用 IPv6 资源，学校通常对 IPv6 流量实行“不计费、不限速”的优惠政策。这构成了免流的经济基础。</li>
+</ul>
+</li>
+<li><strong>防火墙策略的不对称</strong>：  <ul>
+<li>IPv4 网络通常部署了深度的状态防火墙和应用层网关，对 UDP 流量限制严格。  </li>
+<li>IPv6 网络由于地址空间巨大，防火墙策略相对宽松，且为了保证协议的连通性，往往默认放行 UDP 流量。这为基于 UDP 的代理协议（如 Hysteria 2）提供了传输通道。</li>
+</ul>
+</li>
+<li><strong>路由策略的不对称</strong>：  <ul>
+<li>CERNET2 拥有独立的国际出口链路，与电信、联通等运营商的拥塞链路物理隔离。这意味着 IPv6 链路不仅免费，而且往往拥有更低的延迟和更少的丢包，尤其是在访问海外学术资源时。</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-3-技术路线选择：为何-Hysteria-2-是终极答案？"><a href="#1-3-技术路线选择：为何-Hysteria-2-是终极答案？" class="headerlink" title="1.3 技术路线选择：为何 Hysteria 2 是终极答案？"></a><strong>1.3 技术路线选择：为何 Hysteria 2 是终极答案？</strong></h3><p>在“免流”技术的发展史上，曾出现过多种协议，如 OpenVPN（基于 UDP 53&#x2F;67 端口）、Shadowsocks（基于 TCP&#x2F;UDP）、V2Ray（VMess&#x2F;VLESS）等。然而，在当前的校园网环境下，Hysteria 2 无疑是统治级的选择。</p>
+<table>
+<thead>
+<tr>
+<th align="left">协议特性</th>
+<th align="left">TCP 类协议 (VMess&#x2F;Trojan)</th>
+<th align="left">Hysteria 1.x</th>
+<th align="left">Hysteria 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>传输层基础</strong></td>
+<td align="left">TCP</td>
+<td align="left">UDP</td>
+<td align="left">UDP (Custom QUIC)</td>
+</tr>
+<tr>
+<td align="left"><strong>拥塞控制</strong></td>
+<td align="left">受限于系统内核 (CUBIC&#x2F;BBR)</td>
+<td align="left">自定义 Brutal</td>
+<td align="left">改进版 Brutal</td>
+</tr>
+<tr>
+<td align="left"><strong>抗丢包能力</strong></td>
+<td align="left">弱，丢包导致重传窗口减半</td>
+<td align="left">强，恒定速率发送</td>
+<td align="left">极强，且带宽利用率更高</td>
+</tr>
+<tr>
+<td align="left"><strong>混淆能力</strong></td>
+<td align="left">TLS&#x2F;XTLS 伪装</td>
+<td align="left">简单的异或混淆</td>
+<td align="left">Salamander 深度混淆</td>
+</tr>
+<tr>
+<td align="left"><strong>配置复杂度</strong></td>
+<td align="left">高</td>
+<td align="left">中</td>
+<td align="left">低 (YAML 格式)</td>
+</tr>
+<tr>
+<td align="left"><strong>客户端支持</strong></td>
+<td align="left">广泛</td>
+<td align="left">较少</td>
+<td align="left">逐渐普及 (Clash Meta 等)</td>
+</tr>
+</tbody></table>
+<p>Hysteria 2 的核心优势在于其 <strong>Brutal 拥塞控制算法</strong>。传统的 TCP 拥塞控制（如 CUBIC）通过检测丢包来判断网络拥塞，一旦检测到丢包就大幅降低发送速率。而在校园网高峰期，无线信道的物理丢包是常态。Brutal 算法不仅不降低速率，反而会通过填充冗余数据包来“抢占”带宽，这使得它在校园网这种高丢包环境下表现出惊人的稳定性 [2]。</p>
+<hr>
+<h2 id="第二章-服务器端部署：构建基于-IPv6-的数据中枢"><a href="#第二章-服务器端部署：构建基于-IPv6-的数据中枢" class="headerlink" title="第二章 服务器端部署：构建基于 IPv6 的数据中枢"></a><strong>第二章 服务器端部署：构建基于 IPv6 的数据中枢</strong></h2><p>要实现 IPv6 免流，必须拥有一台具备公网 IPv6 地址且位于校园网防火墙之外的服务器（VPS）。这台服务器充当了“跳板”的角色：客户端通过免费的 IPv6 链路将数据发送给 VPS，VPS 再通过其 IPv4 链路访问公网目标，并将结果回传。</p>
+<h3 id="2-1-服务器环境准备"><a href="#2-1-服务器环境准备" class="headerlink" title="2.1 服务器环境准备"></a><strong>2.1 服务器环境准备</strong></h3><p>本教程推荐使用 <strong>Debian 12 (Bookworm)</strong> 作为服务器操作系统，因其内核较新，对 QUIC 和 BBR 的支持更好。</p>
+<h4 id="2-1-1-基础系统加固与依赖安装"><a href="#2-1-1-基础系统加固与依赖安装" class="headerlink" title="2.1.1 基础系统加固与依赖安装"></a><strong>2.1.1 基础系统加固与依赖安装</strong></h4><p>在开始部署 Hysteria 2 之前，必须确保系统的基础安全和工具链完整。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换到 root 用户  </span></span><br><span class="line"><span class="built_in">sudo</span> -i</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新软件包列表并升级系统  </span></span><br><span class="line">apt update &amp;&amp; apt upgrade -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装必要的工具：curl (下载), git (版本控制), nano (编辑), iptables/ufw (防火墙)  </span></span><br><span class="line">apt install curl git nano iptables ufw -y</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-1-2-开启内核级网络优化"><a href="#2-1-2-开启内核级网络优化" class="headerlink" title="2.1.2 开启内核级网络优化"></a><strong>2.1.2 开启内核级网络优化</strong></h4><p>虽然 Hysteria 2 使用 UDP，但系统内核的队列调度算法依然影响性能。推荐开启 FQ (Fair Queueing) 调度算法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑 sysctl 配置文件  </span></span><br><span class="line">nano /etc/sysctl.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加以下内容  </span></span><br><span class="line">net.core.default_qdisc = fq  </span><br><span class="line">net.ipv4.tcp_congestion_control = bbr  </span><br><span class="line">net.ipv6.conf.all.forwarding = 1 <span class="comment"># 开启 IPv6 转发</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使配置生效  </span></span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-Hysteria-2-服务端深度部署"><a href="#2-2-Hysteria-2-服务端深度部署" class="headerlink" title="2.2 Hysteria 2 服务端深度部署"></a><strong>2.2 Hysteria 2 服务端深度部署</strong></h3><h4 id="2-2-1-自动化安装"><a href="#2-2-1-自动化安装" class="headerlink" title="2.2.1 自动化安装"></a><strong>2.2.1 自动化安装</strong></h4><p>官方提供的一键安装脚本是部署 Hysteria 2 最稳妥的方式，它会自动识别系统架构并配置 systemd 服务 [4]。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -fsSL https://get.hy2.sh/)</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，二进制文件位于 <code>/usr/local/bin/hysteria</code>，配置文件位于 <code>/etc/hysteria/config.yaml</code>。</p>
+<h4 id="2-2-2-配置文件详解与定制"><a href="#2-2-2-配置文件详解与定制" class="headerlink" title="2.2.2 配置文件详解与定制"></a><strong>2.2.2 配置文件详解与定制</strong></h4><p>这是免流能否生效的核心环节。我们需要配置 Hysteria 2 监听 IPv6 地址，并开启针对性的混淆策略。</p>
+<p><strong>编辑配置文件：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano /etc/hysteria/config.yaml</span><br></pre></td></tr></table></figure>
+
+<p><strong>配置内容（IPv6 专用版）：</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 监听端口配置  </span></span><br><span class="line"><span class="comment"># 注意：:443 同时监听 IPv4 和 IPv6 的 443 端口。  </span></span><br><span class="line"><span class="comment"># 443 端口通常是 HTTPS 流量，防火墙审查最宽松。  </span></span><br><span class="line"><span class="attr">listen:</span> <span class="string">:443</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># TLS 配置 (Hysteria 2 强制加密)  </span></span><br><span class="line"><span class="attr">tls:</span>  </span><br><span class="line">  <span class="comment"># 推荐使用自签证书（配合客户端 insecure: true），或者使用 acme.sh 申请真实证书  </span></span><br><span class="line">  <span class="comment"># 这里假设你已经生成了自签证书  </span></span><br><span class="line">  <span class="attr">cert:</span> <span class="string">/root/cert.crt</span>  </span><br><span class="line">  <span class="attr">key:</span> <span class="string">/root/private.key</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 认证配置  </span></span><br><span class="line"><span class="attr">auth:</span>  </span><br><span class="line">  <span class="attr">type:</span> <span class="string">userpass</span>  </span><br><span class="line">  <span class="attr">userpass:</span>  </span><br><span class="line">    <span class="comment"># 这里的用户名和密码将用于客户端连接  </span></span><br><span class="line">    <span class="comment"># 建议设置复杂的密码，防止被扫描  </span></span><br><span class="line">    <span class="attr">neu_student:</span> <span class="string">&quot;NEU_Free_Flow_2025_Super_Secure&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 混淆配置 (关键！)  </span></span><br><span class="line"><span class="comment"># Salamander 是 Hysteria 2 特有的混淆协议，将数据包伪装成无特征的随机流  </span></span><br><span class="line"><span class="comment"># 这能有效防止防火墙识别出 QUIC 协议头  </span></span><br><span class="line"><span class="attr">obfs:</span>  </span><br><span class="line">  <span class="attr">type:</span> <span class="string">salamander</span>  </span><br><span class="line">  <span class="attr">salamander:</span>  </span><br><span class="line">    <span class="attr">password:</span> <span class="string">&quot;your_obfuscation_password_here&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 伪装配置 (Masquerade)  </span></span><br><span class="line"><span class="comment"># 当非 Hysteria 流量（如浏览器直接访问）连接到此端口时，返回伪装内容  </span></span><br><span class="line"><span class="comment"># 建议伪装成学校官网或常用的学术网站  </span></span><br><span class="line"><span class="attr">masquerade:</span>  </span><br><span class="line">  <span class="attr">type:</span> <span class="string">proxy</span>  </span><br><span class="line">  <span class="attr">proxy:</span>  </span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://www.neu.edu.cn/</span>  </span><br><span class="line">    <span class="attr">rewriteHost:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 流量控制建议 (下发给客户端的参考值)  </span></span><br><span class="line"><span class="attr">bandwidth:</span>  </span><br><span class="line">  <span class="attr">up:</span> <span class="number">100</span> <span class="string">mbps</span>  </span><br><span class="line">  <span class="attr">down:</span> <span class="number">500</span> <span class="string">mbps</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略客户端的时间差检查 (可选，防止因客户端时间不准导致无法连接)  </span></span><br><span class="line"><span class="attr">ignoreClientBandwidth:</span> <span class="literal">false</span>  </span><br><span class="line"><span class="attr">disableUpdateCheck:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>技术原理深度解析：</strong></p>
+<ul>
+<li><strong>listen: :443</strong>：在 IPv6 网络中，443 端口是兵家必争之地。虽然 Hysteria 是 UDP 协议，但 HTTP&#x2F;3 (QUIC) 同样运行在 UDP 443 上。将服务部署在此端口，可以将免流流量伪装成正常的 HTTP&#x2F;3 网页浏览流量 [2]。  </li>
+<li><strong>obfs: salamander</strong>：东北大学的校园网防火墙可能具备 DPI（深度包检测）能力。标准的 QUIC 协议头包含明显的特征指纹。Salamander 混淆通过密码派生的密钥对数据包进行全加密，使其在统计学上表现为高熵的随机噪声，从而绕过协议识别 [3]。</li>
+</ul>
+<h4 id="2-2-3-自签证书的生成"><a href="#2-2-3-自签证书的生成" class="headerlink" title="2.2.3 自签证书的生成"></a><strong>2.2.3 自签证书的生成</strong></h4><p>为了快速部署，我们可以生成一个有效期 10 年的自签证书：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl req -x509 -newkey rsa:4096 -nodes -sha256 -keyout /root/private.key -out /root/cert.crt -days 3650 -subj <span class="string">&quot;/C=CN/ST=Liaoning/L=Shenyang/O=Northeastern University/OU=Network Center/CN=vpn.neu.edu.cn&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：CN 字段建议填写学校相关的域名，以增加迷惑性。</p>
+<h4 id="2-2-4-启动服务与排错"><a href="#2-2-4-启动服务与排错" class="headerlink" title="2.2.4 启动服务与排错"></a><strong>2.2.4 启动服务与排错</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动服务  </span></span><br><span class="line">systemctl start hysteria-server.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置开机自启  </span></span><br><span class="line">systemctl <span class="built_in">enable</span> hysteria-server.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看运行状态  </span></span><br><span class="line">systemctl status hysteria-server.service</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看实时日志（如果连接失败，这是最重要的排查手段）  </span></span><br><span class="line">journalctl -u hysteria-server.service -f</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="第三章-资源获取：DigitalOcean-与-GitHub-学生包实战教程"><a href="#第三章-资源获取：DigitalOcean-与-GitHub-学生包实战教程" class="headerlink" title="第三章 资源获取：DigitalOcean 与 GitHub 学生包实战教程"></a><strong>第三章 资源获取：DigitalOcean 与 GitHub 学生包实战教程</strong></h2><p><strong>（本章响应用户特定需求，详细讲解如何零成本获取高性能 IPv6 服务器）</strong></p>
+<p>对于在校学生而言，购买商业 VPS 是一笔不小的开支。GitHub Student Developer Pack（GitHub 学生开发者包）提供了价值 200 美元的 DigitalOcean (DO) 信用额度，有效期一年。这是构建免流服务器的最佳资金来源。然而，DigitalOcean 的风控极其严格，许多学生在注册环节即遭封号。本章将提供保姆级的避坑指南。</p>
+<h3 id="3-1-GitHub-Student-Developer-Pack-的申请攻略"><a href="#3-1-GitHub-Student-Developer-Pack-的申请攻略" class="headerlink" title="3.1 GitHub Student Developer Pack 的申请攻略"></a><strong>3.1 GitHub Student Developer Pack 的申请攻略</strong></h3><p>在获取 DO 优惠之前，必须通过 GitHub 的学生身份认证。</p>
+<h4 id="3-1-1-核心准备材料"><a href="#3-1-1-核心准备材料" class="headerlink" title="3.1.1 核心准备材料"></a><strong>3.1.1 核心准备材料</strong></h4><ul>
+<li><strong>东北大学学生邮箱</strong> (@stu.neu.edu.cn)：必须绑定到 GitHub 账户。  </li>
+<li><strong>学生证实体卡</strong>：必须清晰可见姓名、学校、入学时间、预计毕业时间。  </li>
+<li><strong>学信网验证报告</strong>：教育部学籍在线验证报告（推荐英文版），截图需包含验证二维码。  </li>
+<li><strong>位置信息</strong>：申请时，设备的 IP 地址地理位置必须在沈阳（最好是在校内网）。</li>
+</ul>
+<h4 id="3-1-2-申请步骤详解"><a href="#3-1-2-申请步骤详解" class="headerlink" title="3.1.2 申请步骤详解"></a><strong>3.1.2 申请步骤详解</strong></h4><ol>
+<li><strong>登录 GitHub Education</strong>：访问 <a target="_blank" rel="noopener" href="https://education.github.com/pack">https://education.github.com/pack</a>。  </li>
+<li><strong>发起申请</strong>：点击 “Sign up for Student Developer Pack”。  </li>
+<li><strong>身份证明上传</strong>：  <ul>
+<li><strong>关键点</strong>：GitHub 现已拒绝大多数直接上传图片的申请，强烈建议使用手机浏览器访问申请页面，选择 “Take a picture” <strong>实时拍摄</strong>学生证 [5]。  </li>
+<li>如果必须上传图片，请确保图片 EXIF 信息完整，不要使用 PS 修改。</li>
+</ul>
+</li>
+<li><strong>填写申请理由</strong>：  <ul>
+<li>不要写 “I want free VPS”。  </li>
+<li>推荐范本：”I am a Computer Science student at Northeastern University. I plan to use the GitHub Student Pack to learn cloud computing, deploy my personal portfolio website, and experiment with Linux server administration using DigitalOcean droplets.”</li>
+</ul>
+</li>
+<li><strong>等待审核</strong>：通常由 AI 自动审核，几分钟到几天不等。如果失败，请仔细阅读拒绝理由（如“图片模糊”、“不在校区范围内”）并修正 [6]。</li>
+</ol>
+<h3 id="3-2-DigitalOcean-账号注册与防封指南"><a href="#3-2-DigitalOcean-账号注册与防封指南" class="headerlink" title="3.2 DigitalOcean 账号注册与防封指南"></a><strong>3.2 DigitalOcean 账号注册与防封指南</strong></h3><p>获得 GitHub 学生包后，你将获得一个专属链接或 Promo Code。接下来的步骤是“雷区”。DigitalOcean 的 Trust &amp; Safety 算法会对新注册账号进行严苛的欺诈检测。</p>
+<h4 id="3-2-1-注册前的环境隔离"><a href="#3-2-1-注册前的环境隔离" class="headerlink" title="3.2.1 注册前的环境隔离"></a><strong>3.2.1 注册前的环境隔离</strong></h4><ul>
+<li><strong>绝对禁止</strong>使用 VPN、代理或 Tor 浏览器注册。必须使用真实的校园网 IP 或沈阳本地的家庭宽带。  </li>
+<li><strong>浏览器指纹</strong>：建议使用 Chrome 的无痕模式，或者清除所有 Cookies。</li>
+</ul>
+<h4 id="3-2-2-注册流程与优惠码激活"><a href="#3-2-2-注册流程与优惠码激活" class="headerlink" title="3.2.2 注册流程与优惠码激活"></a><strong>3.2.2 注册流程与优惠码激活</strong></h4><ol>
+<li><strong>通过 GitHub 链接跳转</strong>：在 GitHub 包页面点击 DigitalOcean 的链接，这通常会自动带入 Referral Code。  </li>
+<li><strong>填写注册信息</strong>：  <ul>
+<li><strong>姓名</strong>：必须填写<strong>真实姓名</strong>的拼音，且必须与后续绑定的信用卡持卡人一致。不要填 “Test User” 或网名。  </li>
+<li><strong>邮箱</strong>：建议直接使用 GitHub 授权登录，或者使用学校邮箱注册。</li>
+</ul>
+</li>
+<li><strong>支付方式验证（生死攸关的一步）</strong>：  <ul>
+<li>虽然有 200 美元额度，但 DO <strong>强制要求</strong>绑定支付方式以验证人类身份 [7]。  </li>
+<li><strong>推荐方案</strong>：Visa&#x2F;MasterCard 信用卡（国内银行发行的双币&#x2F;全币种卡）。招商银行、中国银行的通过率较高。  </li>
+<li><strong>备选方案</strong>：PayPal。如果使用 PayPal，必须先充值 5 美元。这 5 美元是保护费，能极大降低封号概率。  </li>
+<li><strong>绝对禁区</strong>：不要使用虚拟信用卡（Virtual Cards）、预付卡或以此类推的匿名支付手段。这 100% 会导致账号立即被锁 [8]。</li>
+</ul>
+</li>
+<li><strong>输入 Promo Code</strong>：  <ul>
+<li>如果在注册时未自动应用，进入控制面板后，点击左侧菜单底部的 <strong>Billing</strong>。  </li>
+<li>在 <strong>Promo Code</strong> 输入框中填写 GitHub 提供的代码。  </li>
+<li>注意：优惠码必须在绑定支付方式后才能生效 [10]。</li>
+</ul>
+</li>
+</ol>
+<h4 id="3-2-3-遭遇-“Account-Locked”-的紧急救援"><a href="#3-2-3-遭遇-“Account-Locked”-的紧急救援" class="headerlink" title="3.2.3 遭遇 “Account Locked” 的紧急救援"></a><strong>3.2.3 遭遇 “Account Locked” 的紧急救援</strong></h4><p>如果你刚注册完就收到 “Account Locked” 的邮件，不要惊慌，这是 DO 风控的常见误杀 [12]。</p>
+<ul>
+<li><strong>错误操作</strong>：重新注册一个账号。这会被判定为多账号滥用（Sybil Attack），导致永久封禁。  </li>
+<li><strong>正确操作</strong>：  <ol>
+<li>访问(<a target="_blank" rel="noopener" href="https://cloud.support.digitalocean.com/">https://cloud.support.digitalocean.com/</a>) 提交工单。  </li>
+<li>标题填写：Account Locked Verification - GitHub Student Pack User。  </li>
+<li>内容诚恳解释：”I am a student from Northeastern University. I just signed up using the GitHub Student Pack to learn server deployment. I used my own credit card. Attached is my student ID card for verification.”  </li>
+<li>附件上传：学生证照片、手持身份证照片（如果敢的话）。  </li>
+<li>通常人工客服会在 24 小时内解封。</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-3-创建-IPv6-Droplet-实操"><a href="#3-3-创建-IPv6-Droplet-实操" class="headerlink" title="3.3 创建 IPv6 Droplet 实操"></a><strong>3.3 创建 IPv6 Droplet 实操</strong></h3><p>账号存活后，我们要创建一个支持 IPv6 的 VPS（Droplet）。</p>
+<ol>
+<li><strong>Region（区域）</strong>：建议选择 <strong>Singapore (SGP1)</strong> 或 <strong>San Francisco (SFO3)</strong>。对于 CERNET2 用户，直连美国西海岸或新加坡的速度通常都不错。  </li>
+<li><strong>OS（系统）</strong>：选择 <strong>Debian 12 x64</strong>。  </li>
+<li><strong>Authentication</strong>：<strong>强烈建议使用 SSH Key</strong>。点击 “New SSH Key”，将你电脑生成的 id_rsa.pub 内容粘贴进去。这比密码安全得多，也是 DO 推荐的做法。  </li>
+<li><strong>Additional Options（关键）</strong>：<strong>务必勾选 “IPv6”</strong>。如果不勾选，你将无法获得公网 IPv6 地址，免流也就无从谈起。  </li>
+<li><strong>Create Droplet</strong>：点击创建，稍等片刻，你将获得一个 IPv4 地址和一个 IPv6 地址。</li>
+</ol>
+<hr>
+<h2 id="第四章-客户端配置：让魔法生效（以-Clash-Verge-Rev-为例）"><a href="#第四章-客户端配置：让魔法生效（以-Clash-Verge-Rev-为例）" class="headerlink" title="第四章 客户端配置：让魔法生效（以 Clash Verge Rev 为例）"></a><strong>第四章 客户端配置：让魔法生效（以 Clash Verge Rev 为例）</strong></h2><p>客户端是用户与免流服务器交互的桥梁。本章将以目前最先进的 <strong>Clash Verge Rev</strong> 为例，详细讲解如何配置 Hysteria 2 协议以实现完美免流。</p>
+<h3 id="4-1-客户端架构解析：Clash-Verge-Rev-与-Mihomo"><a href="#4-1-客户端架构解析：Clash-Verge-Rev-与-Mihomo" class="headerlink" title="4.1 客户端架构解析：Clash Verge Rev 与 Mihomo"></a><strong>4.1 客户端架构解析：Clash Verge Rev 与 Mihomo</strong></h3><p>Clash Verge Rev 是 Clash Verge 项目的社区维护版本（Revolution），它本质上是一个图形用户界面（GUI），底层依赖于 <strong>Mihomo (原 Clash Meta)</strong> 内核 [15]。</p>
+<ul>
+<li><strong>GUI 层</strong>：负责界面展示、配置文件的生成与管理（基于 Tauri 框架，轻量级）。  </li>
+<li><strong>内核层 (Mihomo)</strong>：负责实际的网络连接、协议解析（Hysteria 2）、规则匹配和流量转发。  </li>
+<li><strong>重要提示</strong>：只有 Mihomo 内核才原生支持 Hysteria 2 协议。原版 Clash Premium 内核并不支持。</li>
+</ul>
+<h3 id="4-2-安装与内核校验"><a href="#4-2-安装与内核校验" class="headerlink" title="4.2 安装与内核校验"></a><strong>4.2 安装与内核校验</strong></h3><ol>
+<li><strong>下载</strong>：访问 GitHub Releases 页面 (<a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases)%E3%80%82">https://github.com/clash-verge-rev/clash-verge-rev/releases)。</a>  <ul>
+<li>Windows 用户下载 Clash-Verge-Rev-vX.X.X-x64-setup.exe。  </li>
+<li>macOS 用户下载 .dmg 文件。</li>
+</ul>
+</li>
+<li><strong>内核设置</strong>：  <ul>
+<li>安装后打开软件，点击左侧 设置 (Settings)。  </li>
+<li>找到 Clash 内核 (Clash Core) 选项。  </li>
+<li>确保当前选中的内核是 Mihomo（通常显示为 Meta Alpha 或类似字样）。如果不是，点击右侧的下载按钮更新内核。</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-3-配置文件深度定制（YAML）"><a href="#4-3-配置文件深度定制（YAML）" class="headerlink" title="4.3 配置文件深度定制（YAML）"></a><strong>4.3 配置文件深度定制（YAML）</strong></h3><p>由于 Hysteria 2 协议较新，传统的订阅转换网站往往不支持或支持不佳。最可靠的方法是<strong>手动编写本地配置文件</strong>。</p>
+<h4 id="4-3-1-创建配置文件"><a href="#4-3-1-创建配置文件" class="headerlink" title="4.3.1 创建配置文件"></a><strong>4.3.1 创建配置文件</strong></h4><ol>
+<li>点击左侧 配置 (Profiles)。  </li>
+<li>点击右上角 新建 (New) -&gt; 本地文件 (Local File)。  </li>
+<li>命名为 NEU_IPv6_Hysteria2，然后右键选择 编辑文件 (Edit File) [17]。</li>
+</ol>
+<h4 id="4-3-2-完整配置代码"><a href="#4-3-2-完整配置代码" class="headerlink" title="4.3.2 完整配置代码"></a><strong>4.3.2 完整配置代码</strong></h4><p>请将以下代码完整覆盖到编辑器中，并根据注释修改你的服务器信息 [2]。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="comment"># Clash Verge Rev (Mihomo Kernel) Hysteria 2 专用配置  </span></span><br><span class="line"><span class="comment"># 针对东北大学 IPv6 环境优化  </span></span><br><span class="line"><span class="comment"># ---------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 混合端口：同时支持 HTTP 和 SOCKS5 协议  </span></span><br><span class="line"><span class="attr">mixed-port:</span> <span class="number">7890</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 局域网共享：允许同一局域网下的手机/平板连接此电脑代理  </span></span><br><span class="line"><span class="attr">allow-lan:</span> <span class="literal">true</span>  </span><br><span class="line"><span class="attr">bind-address:</span> <span class="string">&#x27;*&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行模式：规则模式 (Rule)  </span></span><br><span class="line"><span class="attr">mode:</span> <span class="string">rule</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 日志级别  </span></span><br><span class="line"><span class="attr">log-level:</span> <span class="string">info</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启 IPv6 支持 (核心开关，必须开启！)  </span></span><br><span class="line"><span class="attr">ipv6:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 外部控制 (用于 GUI 通信)  </span></span><br><span class="line"><span class="attr">external-controller:</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span><span class="string">:9097</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="comment"># DNS 配置 (防泄露与解析加速的关键)  </span></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="attr">dns:</span>  </span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="attr">listen:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">:1053</span>  </span><br><span class="line">  <span class="attr">ipv6:</span> <span class="literal">true</span>  </span><br><span class="line">  <span class="comment"># Enhanced-Mode: fake-ip  </span></span><br><span class="line">  <span class="comment"># 原理：直接返回一个假的 IP 地址给浏览器，后续由代理客户端在远端解析域名。  </span></span><br><span class="line">  <span class="comment"># 优势：1. 毫秒级响应；2. 彻底解决本地 DNS 污染；3. 避免本地 DNS 发起请求导致流量计费。  </span></span><br><span class="line">  <span class="attr">enhanced-mode:</span> <span class="string">fake-ip</span>  </span><br><span class="line">  <span class="attr">fake-ip-range:</span> <span class="number">198.18</span><span class="number">.0</span><span class="number">.1</span><span class="string">/16</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 默认 DNS (用于解析下面的 nameserver 域名)  </span></span><br><span class="line">  <span class="attr">default-nameserver:</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="number">223.5</span><span class="number">.5</span><span class="number">.5</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="number">119.29</span><span class="number">.29</span><span class="number">.29</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 主要 DNS (走代理查询)  </span></span><br><span class="line">  <span class="attr">nameserver:</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="string">https://dns.alidns.com/dns-query</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="string">https://doh.pub/dns-query</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 备用 DNS (直连查询，用于国内域名)  </span></span><br><span class="line">  <span class="attr">fallback:</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="string">https://8.8.8.8/dns-query</span>  </span><br><span class="line">    <span class="bullet">-</span> <span class="string">https://1.1.1.1/dns-query</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 配置 fallback 过滤，强制国内域名走 nameserver 解析  </span></span><br><span class="line">  <span class="attr">fallback-filter:</span>  </span><br><span class="line">    <span class="attr">geoip:</span> <span class="literal">true</span>  </span><br><span class="line">    <span class="attr">ipcidr:</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="number">240.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">/4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="comment"># 代理节点配置 (Proxies)  </span></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="attr">proxies:</span>  </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;NEU_IPv6_Hysteria2&quot;</span>  </span><br><span class="line">    <span class="attr">type:</span> <span class="string">hysteria2</span>  </span><br><span class="line">    <span class="comment"># 服务器 IPv6 地址，必须用方括号 包裹  </span></span><br><span class="line">    <span class="attr">server:</span> <span class="string">&quot;[2001:db8:xxxx:xxxx::1]&quot;</span>   </span><br><span class="line">    <span class="attr">port:</span> <span class="number">443</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># 认证密码 (对应服务端 auth.userpass)  </span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">&quot;NEU_Free_Flow_2025_Super_Secure&quot;</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># 混淆设置 (对应服务端 obfs)  </span></span><br><span class="line">    <span class="attr">obfs:</span> <span class="string">salamander</span>  </span><br><span class="line">    <span class="attr">obfs-password:</span> <span class="string">&quot;your_obfuscation_password_here&quot;</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># SNI (Server Name Indication)  </span></span><br><span class="line">    <span class="comment"># 伪装域名。建议填写学校官网，或者即使填错，服务端若不校验也没关系。  </span></span><br><span class="line">    <span class="attr">sni:</span> <span class="string">www.neu.edu.cn</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># 证书校验  </span></span><br><span class="line">    <span class="comment"># 如果是自签证书，必须设置为 true  </span></span><br><span class="line">    <span class="attr">skip-cert-verify:</span> <span class="literal">true</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># 指纹模拟 (防止被识别为非浏览器流量)  </span></span><br><span class="line">    <span class="attr">fingerprint:</span> <span class="string">chrome</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># Brutal 拥塞控制参数 (关键优化！)  </span></span><br><span class="line">    <span class="comment"># up: 上行带宽。建议设置为你物理网卡上限的 80%。  </span></span><br><span class="line">    <span class="comment"># down: 下行带宽。建议预留冗余。  </span></span><br><span class="line">    <span class="comment"># 例如：百兆端口填 100 Mbps，千兆填 500-800 Mbps。  </span></span><br><span class="line">    <span class="comment"># 单位必须大写 Mbps  </span></span><br><span class="line">    <span class="attr">up:</span> <span class="string">&quot;50 Mbps&quot;</span>  </span><br><span class="line">    <span class="attr">down:</span> <span class="string">&quot;500 Mbps&quot;</span>  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># ALPN (应用层协议协商)  </span></span><br><span class="line">    <span class="attr">alpn:</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="string">h3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="comment"># 代理组配置 (Proxy Groups)  </span></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="attr">proxy-groups:</span>  </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;PROXY&quot;</span>  </span><br><span class="line">    <span class="attr">type:</span> <span class="string">select</span>  </span><br><span class="line">    <span class="attr">proxies:</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;NEU_IPv6_Hysteria2&quot;</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="string">DIRECT</span></span><br><span class="line"></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;ADBlock&quot;</span>  </span><br><span class="line">    <span class="attr">type:</span> <span class="string">select</span>  </span><br><span class="line">    <span class="attr">proxies:</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="string">REJECT</span>  </span><br><span class="line">      <span class="bullet">-</span> <span class="string">DIRECT</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="comment"># 路由规则 (Rules)  </span></span><br><span class="line"><span class="comment"># ---------------------------------------------------  </span></span><br><span class="line"><span class="attr">rules:</span>  </span><br><span class="line">  <span class="comment"># 1. 东北大学校内资源 -&gt; 直连  </span></span><br><span class="line">  <span class="comment"># 必须精确匹配，否则访问校内网也会绕地球一圈  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,neu.edu.cn,DIRECT</span>  </span><br><span class="line">  <span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,neu.edu,DIRECT</span>  </span><br><span class="line">  <span class="bullet">-</span> <span class="string">IP-CIDR,202.118.0.0/16,DIRECT</span>  <span class="comment"># NEU IPv4  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">IP-CIDR6,2001:250:4000::/48,DIRECT</span> <span class="comment"># NEU IPv6  </span></span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 2. 广告拦截  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOSITE,category-ads-all,ADBlock</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 3. 国内流量 -&gt; 直连 (为了速度)  </span></span><br><span class="line">  <span class="comment"># 使用 GEOSITE 数据库匹配常见国内域名  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOSITE,cn,DIRECT</span>  </span><br><span class="line">  <span class="comment"># 使用 GEOIP 数据库匹配国内 IP  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,CN,DIRECT</span>  </span><br><span class="line">  <span class="comment"># 也是直连私有地址  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">GEOIP,private,DIRECT</span>  </span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 4. 兜底规则：其余所有流量 -&gt; 走代理  </span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">MATCH,PROXY</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-关键配置项的技术逻辑"><a href="#4-4-关键配置项的技术逻辑" class="headerlink" title="4.4 关键配置项的技术逻辑"></a><strong>4.4 关键配置项的技术逻辑</strong></h3><h4 id="4-4-1-fake-ip-模式的必要性"><a href="#4-4-1-fake-ip-模式的必要性" class="headerlink" title="4.4.1 fake-ip 模式的必要性"></a><strong>4.4.1 fake-ip 模式的必要性</strong></h4><p>在传统的 redir-host 模式下，当你在浏览器输入 <a target="_blank" rel="noopener" href="http://www.google.com/">www.google.com</a> 时，Clash 必须先在本地进行 DNS 解析以获取 IP，然后根据 IP 判断是否走代理。</p>
+<ul>
+<li><strong>问题</strong>：由于防火墙的存在，本地 DNS 解析 Google 往往会收到被污染的 IP 或者直接超时。即使解析成功，DNS 查询包本身也是 IPv4 UDP 包，可能会产生计费流量。  </li>
+<li><strong>Fake-IP 优势</strong>：Clash 直接返回一个假的 IP（如 198.18.0.1），浏览器立即向这个假 IP 发起连接。Clash 拦截这个连接，并将域名封装在 Hysteria 2 协议中发往 VPS，由 VPS 在海外进行真正的 DNS 解析。全过程在本地没有任何真实的 DNS 查询流量，既快又省钱。</li>
+</ul>
+<h4 id="4-4-2-up-和-down-的设置哲学"><a href="#4-4-2-up-和-down-的设置哲学" class="headerlink" title="4.4.2 up 和 down 的设置哲学"></a><strong>4.4.2 up 和 down 的设置哲学</strong></h4><p>Hysteria 2 的 Brutal 算法是一种“自私”的算法。它不关心网络是否拥塞，而是试图以恒定速率填充管道。</p>
+<ul>
+<li><strong>设置过大</strong>：如果你的物理带宽只有 100M，但你设置了 down: 1000 Mbps，Hysteria 会尝试发送远超物理极限的数据包，导致大量丢包和重传，反而降低速度，甚至引起网管注意。  </li>
+<li><strong>设置过小</strong>：浪费了带宽。  </li>
+<li><strong>最佳实践</strong>：进行一次真实的 IPv6 测速（使用校内测速站），将测得带宽的 90% 填入配置文件。</li>
+</ul>
+<h4 id="4-4-3-端口跳跃-Port-Hopping"><a href="#4-4-3-端口跳跃-Port-Hopping" class="headerlink" title="4.4.3 端口跳跃 (Port Hopping)"></a><strong>4.4.3 端口跳跃 (Port Hopping)</strong></h4><p>如果学校防火墙对单一 UDP 端口的大流量连接进行限速（例如，检测到 443 端口持续 1 小时占用 100Mbps），可以使用端口跳跃 [3]。</p>
+<ul>
+<li><strong>服务端</strong>：listen: :20000-50000  </li>
+<li><strong>客户端</strong>：ports: 20000-50000 (注意这里是 ports 复数)。  </li>
+<li>这会让流量在 30000 个端口之间随机跳跃，防火墙很难对这种离散的流量进行聚合限速。</li>
+</ul>
+<hr>
+<h2 id="第五章-进阶优化与故障排查"><a href="#第五章-进阶优化与故障排查" class="headerlink" title="第五章 进阶优化与故障排查"></a><strong>第五章 进阶优化与故障排查</strong></h2><h3 id="5-1-常见故障自查表"><a href="#5-1-常见故障自查表" class="headerlink" title="5.1 常见故障自查表"></a><strong>5.1 常见故障自查表</strong></h3><table>
+<thead>
+<tr>
+<th align="left">现象</th>
+<th align="left">可能原因</th>
+<th align="left">解决方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Client Error: Connect &#x2F; Timeout</strong></td>
+<td align="left">1. 客户端与服务端时间不同步 2. 防火墙端口未放行 3. IPv6 路由不通</td>
+<td align="left">1. 校准时间（误差&lt;15s） 2. 检查 ufw 3. ping6 测试连通性</td>
+</tr>
+<tr>
+<td align="left"><strong>能打开 Google 但打不开百度</strong></td>
+<td align="left">路由规则配置错误，国内流量也走了代理</td>
+<td align="left">检查 rules 部分，确保 GEOSITE,cn,DIRECT 在 MATCH,PROXY 之前</td>
+</tr>
+<tr>
+<td align="left"><strong>速度极慢</strong></td>
+<td align="left">1. up&#x2F;down 设置不合理 2. 运营商对 UDP QoS 限速</td>
+<td align="left">1. 调整带宽参数 2. 开启 obfs: salamander</td>
+</tr>
+<tr>
+<td align="left"><strong>GitHub 学生包申请秒拒</strong></td>
+<td align="left">IP 地址地理位置不在校内</td>
+<td align="left">关闭代理，连接校园网 Wi-Fi 重新申请</td>
+</tr>
+</tbody></table>
+<h3 id="5-2-性能调优：MTU-的影响"><a href="#5-2-性能调优：MTU-的影响" class="headerlink" title="5.2 性能调优：MTU 的影响"></a><strong>5.2 性能调优：MTU 的影响</strong></h3><p>Hysteria 2 基于 UDP，涉及 IP 分片问题。如果你的网络环境 MTU（最大传输单元）较小（如 PPPoE 拨号常见 1492），而 Hysteria 试图发送 1500 字节的包，就会导致分片，严重影响性能。</p>
+<ul>
+<li><strong>优化</strong>：在 Clash Verge Rev 的 tun 配置中（如果使用 TUN 模式），或者在 Hysteria 2 服务端配置中，明确指定 quic 参数：</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">quic:</span>  </span><br><span class="line">  <span class="attr">initStreamReceiveWindow:</span> <span class="number">8388608</span>  </span><br><span class="line">  <span class="attr">maxStreamReceiveWindow:</span> <span class="number">8388608</span></span><br></pre></td></tr></table></figure>
+
+<p>通常 Hysteria 2 会自动探测 MTU，但在某些极端网络下，手动设置稍小的 MTU（如 1400）可能会有奇效。</p>
+<hr>
+<h2 id="第六章-法律边界与安全伦理：从入门到入狱的距离"><a href="#第六章-法律边界与安全伦理：从入门到入狱的距离" class="headerlink" title="第六章 法律边界与安全伦理：从入门到入狱的距离"></a><strong>第六章 法律边界与安全伦理：从入门到入狱的距离</strong></h2><p>本报告标题虽为戏谑，但现实中“免流”行为确实游走在规则的边缘。作为具备专业知识的大学生，必须清晰认知其法律与道德风险。</p>
+<h3 id="6-1-“盗窃电信服务”的法律定性"><a href="#6-1-“盗窃电信服务”的法律定性" class="headerlink" title="6.1 “盗窃电信服务”的法律定性"></a><strong>6.1 “盗窃电信服务”的法律定性</strong></h3><p>从法律严谨的角度看，绕过计费系统使用网络资源，属于“以非法手段获取计算机信息系统数据”或“盗窃”。</p>
+<ul>
+<li><strong>司法判例</strong>：国内已有案例判决利用运营商漏洞大规模盗取流量并转售获利者触犯刑法。  </li>
+<li><strong>免流 vs 盗窃</strong>：校园网免流通常属于“利用规则漏洞”（IPv6 免费是学校政策），而非“破坏系统”。但如果通过此技术进行转售、大规模下载导致网络瘫痪，性质就会发生变化。</li>
+</ul>
+<h3 id="6-2-东北大学校规校纪"><a href="#6-2-东北大学校规校纪" class="headerlink" title="6.2 东北大学校规校纪"></a><strong>6.2 东北大学校规校纪</strong></h3><p>根据《东北大学校园网用户管理办法》，以下行为是被严格禁止的：</p>
+<ol>
+<li><strong>私自架设代理服务器</strong>：将校内网络资源提供给校外人员使用。  </li>
+<li><strong>恶意占用带宽</strong>：长时间进行 BT 下载、P2P 传输，影响他人正常使用。  </li>
+<li><strong>逃避计费</strong>：利用技术手段逃避网络使用费。</li>
+</ol>
+<p>违规者轻则封停账号、通报批评，重则记过处分。</p>
+<h3 id="6-3-安全伦理与自我保护"><a href="#6-3-安全伦理与自我保护" class="headerlink" title="6.3 安全伦理与自我保护"></a><strong>6.3 安全伦理与自我保护</strong></h3><ol>
+<li><strong>数据安全</strong>：自建节点（如本教程所述）相对安全，但如果使用他人提供的“免费节点”，你的所有流量（包括教务处密码、银行卡号）都相当于在裸奔。<strong>永远不要信任第三方免流节点。</strong>  </li>
+<li><strong>适度原则</strong>：技术本身无罪。用它来查阅 Google Scholar、访问 GitHub 进行学术研究是合理的；但如果用它来 24 小时挂机下载 4K 电影，不仅是对公共资源的滥用，也是在挑衅网管的耐心。  </li>
+<li><strong>日志审计</strong>：网络中心的核心路由器（NE40）具备强大的日志记录能力。不要以为开启了加密混淆就彻底隐形。流量特征（Traffic Pattern）——例如某个 IP 长期保持高带宽 UDP 连接——本身就是最大的特征。</li>
+</ol>
+<h3 id="6-4-结语"><a href="#6-4-结语" class="headerlink" title="6.4 结语"></a><strong>6.4 结语</strong></h3><p>互联网的设计初衷是互联互通。IPv6 的普及本应消除 NAT 的隔阂，让每一个设备都能平等地对话。我们在探索“免流”技术的过程中，实际上是在通过技术手段对抗人为设置的壁垒。</p>
+<p>愿每一位读者都能掌握这门技术，打开通往广阔数字世界的大门；更愿大家能恪守内心的准则，让技术服务于成长，而非沉沦。</p>
+<p><strong>Keep calm and carry on, but don’t get caught.</strong></p>
+<hr>
+<p><em>(本文仅供网络技术研究与学术交流使用，请勿用于非法用途。作者不对任何因使用本文所述技术导致的账号封禁或法律后果负责。)</em></p>
+<h4 id="引用的著作"><a href="#引用的著作" class="headerlink" title="引用的著作"></a><strong>引用的著作</strong></h4><ol>
+<li>东北大学：六维空间吸引用户- IPv6校园网, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://www.edu.cn/xxh/ji_shu_ju_le_bu/cernet2_lpv6/IPv6_xyw/201008/t20100810_506541.shtml">https://www.edu.cn/xxh/ji_shu_ju_le_bu&#x2F;cernet2_lpv6&#x2F;IPv6_xyw&#x2F;201008&#x2F;t20100810_506541.shtml</a>  </li>
+<li>Full Client Config - Hysteria 2, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://v2.hysteria.network/docs/advanced/Full-Client-Config/">https://v2.hysteria.network/docs/advanced/Full-Client-Config/</a>  </li>
+<li>Hysteria2 - 虚空终端Docs, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://wiki.metacubex.one/config/proxies/hysteria2/">https://wiki.metacubex.one/config/proxies/hysteria2/</a>  </li>
+<li>Installation - Hysteria 2, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://v2.hysteria.network/docs/getting-started/Installation/">https://v2.hysteria.network/docs/getting-started/Installation/</a>  </li>
+<li>Problem in providing the proof for Student Developer Pack #56401 - GitHub, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://github.com/orgs/community/discussions/56401">https://github.com/orgs/community/discussions/56401</a>  </li>
+<li>Solving problems with your GitHub Education access, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://docs.github.com/en/education/about-github-education/github-education-for-students/solving-problems-with-your-github-education-access">https://docs.github.com/en/education/about-github-education/github-education-for-students/solving-problems-with-your-github-education-access</a>  </li>
+<li>DigitalOcean Promo Code 2026 &#x2F; $200 - $400 &#x2F; 2-Months - GitHub Gist, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://gist.github.com/fredroo/4d4046cbe92f80ba5fc66ebe50bad860">https://gist.github.com/fredroo/4d4046cbe92f80ba5fc66ebe50bad860</a>  </li>
+<li>How to Manage Payment Methods on DigitalOcean, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://docs.digitalocean.com/platform/billing/manage-payment-methods/">https://docs.digitalocean.com/platform/billing/manage-payment-methods/</a>  </li>
+<li>DigitalOcean locked my account immediately after paying - LowEndTalk, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://lowendtalk.com/discussion/165974/digitalocean-locked-my-account-immediately-after-paying">https://lowendtalk.com/discussion/165974/digitalocean-locked-my-account-immediately-after-paying</a>  </li>
+<li>Promo Codes | DigitalOcean Documentation, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://docs.digitalocean.com/platform/billing/promo-codes/">https://docs.digitalocean.com/platform/billing/promo-codes/</a>  </li>
+<li>Digital Ocean Promo Code : r&#x2F;LinuxActionShow - Reddit, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://www.reddit.com/r/LinuxActionShow/comments/48h3tr/digital_ocean_promo_code/">https://www.reddit.com/r/LinuxActionShow/comments/48h3tr/digital_ocean_promo_code&#x2F;</a>  </li>
+<li>What do I do if my account was locked during sign-up? | DigitalOcean Documentation, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://docs.digitalocean.com/support/what-do-i-do-if-my-account-was-locked-during-sign-up/">https://docs.digitalocean.com/support/what-do-i-do-if-my-account-was-locked-during-sign-up/</a>  </li>
+<li>Digital Ocean locked my account upon creation without explanation : r&#x2F;digital_ocean, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://www.reddit.com/r/digital_ocean/comments/que3ef/digital_ocean_locked_my_account_upon_creation/">https://www.reddit.com/r/digital_ocean&#x2F;comments&#x2F;que3ef&#x2F;digital_ocean_locked_my_account_upon_creation&#x2F;</a>  </li>
+<li>Digital ocean locked my account with no reason : r&#x2F;digital_ocean - Reddit, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://www.reddit.com/r/digital_ocean/comments/7zpg64/digital_ocean_locked_my_account_with_no_reason/">https://www.reddit.com/r/digital_ocean&#x2F;comments&#x2F;7zpg64&#x2F;digital_ocean_locked_my_account_with_no_reason&#x2F;</a>  </li>
+<li>clash-verge-rev&#x2F;clash-verge-rev: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience - GitHub, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev">https://github.com/clash-verge-rev/clash-verge-rev</a>  </li>
+<li>Clash Verge Series Best Practices - Lainbo’s Blog, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="http://lainbo.dev/clash-config?locale=en">http://lainbo.dev/clash-config?locale=en</a>  </li>
+<li>Set Up Clash Verge on Windows - Knowledgebase - HOLYTECH, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://store.holytech.tech/knowledgebase.php?action=displayarticle&id=72">https://store.holytech.tech/knowledgebase.php?action=displayarticle&amp;id=72</a>  </li>
+<li>[Feature] Import merge profile from local files · Issue #760 · zzzgydi&#x2F;clash-verge - GitHub, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://github.com/zzzgydi/clash-verge/issues/760">https://github.com/zzzgydi/clash-verge/issues/760</a>  </li>
+<li>Hysteria2 - Clash.Rev Docs, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://merlinkodo.github.io/Clash-Rev-Doc/config/proxies/hysteria2/">https://merlinkodo.github.io/Clash-Rev-Doc/config/proxies/hysteria2/</a>  </li>
+<li>Full Server Config - Hysteria 2, 访问时间为 十一月 28, 2025， <a target="_blank" rel="noopener" href="https://v2.hysteria.network/docs/advanced/Full-Server-Config/">https://v2.hysteria.network/docs/advanced/Full-Server-Config/</a></li>
+</ol>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/1.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/1.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">JianFang</div><div class="post-copyright__author_desc">记录编程与生活</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/')">校园网 IPv6 免流终极指南：以东北大学为例</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/images/qrcode-wechat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/qrcode-wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/qrcode-alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/qrcode-alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=校园网 IPv6 免流终极指南：以东北大学为例&amp;url=https://edu-cloud.tech/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/&amp;pic=/images/xiyangyang.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://edu-cloud.tech" target="_blank">防微杜渐的博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教程<span class="tagsPageCount">3</span></a><a class="post-meta__box__tags" href="/tags/IPv6/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>IPv6<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>校园网<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E5%85%8D%E6%B5%81/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>免流<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/Hysteria2/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Hysteria2<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="/images/guangying.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/11/26/PFC5-0%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9%E6%A8%A1%E6%8B%9F%E4%BB%A3%E7%A0%81%EF%BC%88%E5%85%A8%EF%BC%89/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/guangying.gif" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">PFC5.0 2D单轴压缩模拟全代码分享</div></div></a></div><div class="next-post pull-right"><a href="/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/11/19/2025-11-19-hexo-anzhiyu-setup-detailed/" title="用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/huolishaonv.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-11-19</div><div class="title">用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）</div></div></a></div><div><a href="/2025/11/21/2025-11-21-neu-booking-bot/" title="东北大学（NEU）羽毛球场地预约工具详解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/yunxiao.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-11-21</div><div class="title">东北大学（NEU）羽毛球场地预约工具详解</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">这是一个由 Hexo 搭建的个人博客，记录技术笔记与随笔。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">JianFang</h1><div class="author-info__desc">记录编程与生活</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/1298786483" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://v.douyin.com/hgA8x3viSqg" target="_blank" title="Douyin"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="social-icon faa-parent animated-hover" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1298786483@qq.com" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a></div></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E7%BB%AA%E8%AE%BA%EF%BC%9A%E4%B8%8B%E4%B8%80%E4%BB%A3%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%A0%A1%E5%9B%AD%E7%BD%91%E8%AE%A1%E8%B4%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8D%9A%E5%BC%88"><span class="toc-number">1.</span> <span class="toc-text">第一章 绪论：下一代互联网协议与校园网计费系统的博弈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E7%A0%94%E7%A9%B6%E8%83%8C%E6%99%AF%EF%BC%9AIPv4-%E5%9C%B0%E5%9D%80%E6%9E%AF%E7%AB%AD%E4%B8%8E-IPv6-%E7%9A%84%E5%B4%9B%E8%B5%B7"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 研究背景：IPv4 地址枯竭与 IPv6 的崛起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E2%80%9C%E5%85%8D%E6%B5%81%E2%80%9D%E7%8E%B0%E8%B1%A1%E7%9A%84%E4%BA%A7%E7%94%9F%E6%9C%BA%E5%88%B6%EF%BC%9A%E6%8A%80%E6%9C%AF%E4%B8%8E%E6%94%BF%E7%AD%96%E7%9A%84%E7%BC%9D%E9%9A%99"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 “免流”现象的产生机制：技术与政策的缝隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF%E9%80%89%E6%8B%A9%EF%BC%9A%E4%B8%BA%E4%BD%95-Hysteria-2-%E6%98%AF%E7%BB%88%E6%9E%81%E7%AD%94%E6%A1%88%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 技术路线选择：为何 Hysteria 2 是终极答案？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E9%83%A8%E7%BD%B2%EF%BC%9A%E6%9E%84%E5%BB%BA%E5%9F%BA%E4%BA%8E-IPv6-%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%9E%A2"><span class="toc-number">2.</span> <span class="toc-text">第二章 服务器端部署：构建基于 IPv6 的数据中枢</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 服务器环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F%E5%8A%A0%E5%9B%BA%E4%B8%8E%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 基础系统加固与依赖安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-%E5%BC%80%E5%90%AF%E5%86%85%E6%A0%B8%E7%BA%A7%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 开启内核级网络优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Hysteria-2-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B7%B1%E5%BA%A6%E9%83%A8%E7%BD%B2"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Hysteria 2 服务端深度部署</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-1-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%89%E8%A3%85"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 自动化安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3%E4%B8%8E%E5%AE%9A%E5%88%B6"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 配置文件详解与定制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-3-%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6%E7%9A%84%E7%94%9F%E6%88%90"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 自签证书的生成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-4-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E4%B8%8E%E6%8E%92%E9%94%99"><span class="toc-number">2.2.4.</span> <span class="toc-text">2.2.4 启动服务与排错</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96%EF%BC%9ADigitalOcean-%E4%B8%8E-GitHub-%E5%AD%A6%E7%94%9F%E5%8C%85%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">第三章 资源获取：DigitalOcean 与 GitHub 学生包实战教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-GitHub-Student-Developer-Pack-%E7%9A%84%E7%94%B3%E8%AF%B7%E6%94%BB%E7%95%A5"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 GitHub Student Developer Pack 的申请攻略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-1-%E6%A0%B8%E5%BF%83%E5%87%86%E5%A4%87%E6%9D%90%E6%96%99"><span class="toc-number">3.1.1.</span> <span class="toc-text">3.1.1 核心准备材料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-2-%E7%94%B3%E8%AF%B7%E6%AD%A5%E9%AA%A4%E8%AF%A6%E8%A7%A3"><span class="toc-number">3.1.2.</span> <span class="toc-text">3.1.2 申请步骤详解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-DigitalOcean-%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E9%98%B2%E5%B0%81%E6%8C%87%E5%8D%97"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 DigitalOcean 账号注册与防封指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-1-%E6%B3%A8%E5%86%8C%E5%89%8D%E7%9A%84%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 注册前的环境隔离</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-2-%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B%E4%B8%8E%E4%BC%98%E6%83%A0%E7%A0%81%E6%BF%80%E6%B4%BB"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 注册流程与优惠码激活</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-3-%E9%81%AD%E9%81%87-%E2%80%9CAccount-Locked%E2%80%9D-%E7%9A%84%E7%B4%A7%E6%80%A5%E6%95%91%E6%8F%B4"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.2.3 遭遇 “Account Locked” 的紧急救援</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%88%9B%E5%BB%BA-IPv6-Droplet-%E5%AE%9E%E6%93%8D"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 创建 IPv6 Droplet 实操</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE%EF%BC%9A%E8%AE%A9%E9%AD%94%E6%B3%95%E7%94%9F%E6%95%88%EF%BC%88%E4%BB%A5-Clash-Verge-Rev-%E4%B8%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">第四章 客户端配置：让魔法生效（以 Clash Verge Rev 为例）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%9E%B6%E6%9E%84%E8%A7%A3%E6%9E%90%EF%BC%9AClash-Verge-Rev-%E4%B8%8E-Mihomo"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 客户端架构解析：Clash Verge Rev 与 Mihomo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%AE%89%E8%A3%85%E4%B8%8E%E5%86%85%E6%A0%B8%E6%A0%A1%E9%AA%8C"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 安装与内核校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%B1%E5%BA%A6%E5%AE%9A%E5%88%B6%EF%BC%88YAML%EF%BC%89"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 配置文件深度定制（YAML）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-1-%E5%88%9B%E5%BB%BA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 创建配置文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-2-%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2 完整配置代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E5%85%B3%E9%94%AE%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9A%84%E6%8A%80%E6%9C%AF%E9%80%BB%E8%BE%91"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 关键配置项的技术逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-1-fake-ip-%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%BF%85%E8%A6%81%E6%80%A7"><span class="toc-number">4.4.1.</span> <span class="toc-text">4.4.1 fake-ip 模式的必要性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-2-up-%E5%92%8C-down-%E7%9A%84%E8%AE%BE%E7%BD%AE%E5%93%B2%E5%AD%A6"><span class="toc-number">4.4.2.</span> <span class="toc-text">4.4.2 up 和 down 的设置哲学</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-3-%E7%AB%AF%E5%8F%A3%E8%B7%B3%E8%B7%83-Port-Hopping"><span class="toc-number">4.4.3.</span> <span class="toc-text">4.4.3 端口跳跃 (Port Hopping)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96%E4%B8%8E%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"><span class="toc-number">5.</span> <span class="toc-text">第五章 进阶优化与故障排查</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%B8%B8%E8%A7%81%E6%95%85%E9%9A%9C%E8%87%AA%E6%9F%A5%E8%A1%A8"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 常见故障自查表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98%EF%BC%9AMTU-%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 性能调优：MTU 的影响</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E6%B3%95%E5%BE%8B%E8%BE%B9%E7%95%8C%E4%B8%8E%E5%AE%89%E5%85%A8%E4%BC%A6%E7%90%86%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%E7%9A%84%E8%B7%9D%E7%A6%BB"><span class="toc-number">6.</span> <span class="toc-text">第六章 法律边界与安全伦理：从入门到入狱的距离</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E2%80%9C%E7%9B%97%E7%AA%83%E7%94%B5%E4%BF%A1%E6%9C%8D%E5%8A%A1%E2%80%9D%E7%9A%84%E6%B3%95%E5%BE%8B%E5%AE%9A%E6%80%A7"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 “盗窃电信服务”的法律定性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E6%A0%A1%E8%A7%84%E6%A0%A1%E7%BA%AA"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 东北大学校规校纪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E5%AE%89%E5%85%A8%E4%BC%A6%E7%90%86%E4%B8%8E%E8%87%AA%E6%88%91%E4%BF%9D%E6%8A%A4"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 安全伦理与自我保护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E7%BB%93%E8%AF%AD"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 结语</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%9A%84%E8%91%97%E4%BD%9C"><span class="toc-number">6.4.1.</span> <span class="toc-text">引用的著作</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B/" title="无题">无题</a><time datetime="2025-11-28T15:59:34.084Z" title="发表于 2025-11-28 23:59:34">2025-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/" title="校园网 IPv6 免流终极指南：以东北大学为例"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/xiyangyang.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="校园网 IPv6 免流终极指南：以东北大学为例"/></a><div class="content"><a class="title" href="/2025/11/28/%E6%A0%A1%E5%9B%AD%E7%BD%91-IPv6-%E5%85%8D%E6%B5%81%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E7%8B%B1%EF%BC%88%E8%AF%AF%EF%BC%89%E2%80%94%E2%80%94%E4%BB%A5%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%B8%BA%E4%BE%8B%20-%20%E5%89%AF%E6%9C%AC/" title="校园网 IPv6 免流终极指南：以东北大学为例">校园网 IPv6 免流终极指南：以东北大学为例</a><time datetime="2025-11-28T06:20:00.000Z" title="发表于 2025-11-28 14:20:00">2025-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/26/PFC5-0%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9%E6%A8%A1%E6%8B%9F%E4%BB%A3%E7%A0%81%EF%BC%88%E5%85%A8%EF%BC%89/" title="PFC5.0 2D单轴压缩模拟全代码分享"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/guangying.gif" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PFC5.0 2D单轴压缩模拟全代码分享"/></a><div class="content"><a class="title" href="/2025/11/26/PFC5-0%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9%E6%A8%A1%E6%8B%9F%E4%BB%A3%E7%A0%81%EF%BC%88%E5%85%A8%EF%BC%89/" title="PFC5.0 2D单轴压缩模拟全代码分享">PFC5.0 2D单轴压缩模拟全代码分享</a><time datetime="2025-11-26T04:00:00.000Z" title="发表于 2025-11-26 12:00:00">2025-11-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/21/2025-11-21-neu-booking-bot/" title="东北大学（NEU）羽毛球场地预约工具详解"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/yunxiao.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="东北大学（NEU）羽毛球场地预约工具详解"/></a><div class="content"><a class="title" href="/2025/11/21/2025-11-21-neu-booking-bot/" title="东北大学（NEU）羽毛球场地预约工具详解">东北大学（NEU）羽毛球场地预约工具详解</a><time datetime="2025-11-20T19:57:20.000Z" title="发表于 2025-11-21 03:57:20">2025-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/11/19/2025-11-19-hexo-anzhiyu-setup-detailed/" title="用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/huolishaonv.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）"/></a><div class="content"><a class="title" href="/2025/11/19/2025-11-19-hexo-anzhiyu-setup-detailed/" title="用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）">用 Hexo + Anzhiyu 从零搭建个人博客（超详细步骤）</a><time datetime="2025-11-18T20:32:56.000Z" title="发表于 2025-11-19 04:32:56">2025-11-19</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=1298786483@qq.com" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://weibo.com/u/7558054917" title="微博"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/1.jpg" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/1298786483" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/372204786" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/hgA8x3viSqg" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC协议"><i class="anzhiyufont anzhiyu-icon-copyright"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">服务</div><div class="footer-links"><a class="footer-item" title="51la统计" target="_blank" rel="noopener" href="https://v6.51.la/">51la统计</a><a class="footer-item" title="十年之约" target="_blank" rel="noopener" href="https://www.foreverblog.cn/">十年之约</a><a class="footer-item" title="开往" target="_blank" rel="noopener" href="https://github.com/travellings-link/travellings">开往</a></div></div><div class="footer-group"><div class="footer-title">主题</div><div class="footer-links"><a class="footer-item" title="文档" href="/docs/">文档</a><a class="footer-item" title="源码" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">源码</a><a class="footer-item" title="更新日志" href="/update/">更新日志</a></div></div><div class="footer-group"><div class="footer-title">导航</div><div class="footer-links"><a class="footer-item" title="即刻短文" href="/essay/">即刻短文</a><a class="footer-item" title="友链文章" href="/fcircle/">友链文章</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">协议</div><div class="footer-links"><a class="footer-item" title="隐私协议" href="/privacy/">隐私协议</a><a class="footer-item" title="Cookies" href="/cookies/">Cookies</a><a class="footer-item" title="版权协议" href="/copyright/">版权协议</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友链</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="JianFang" target="_blank">JianFang</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">4</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anzhiyu/" style="font-size: 0.88rem;">Anzhiyu<sup>1</sup></a><a href="/tags/GitHub-Pages/" style="font-size: 0.88rem;">GitHub Pages<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/Hysteria2/" style="font-size: 0.88rem;">Hysteria2<sup>1</sup></a><a href="/tags/IPv6/" style="font-size: 0.88rem;">IPv6<sup>1</sup></a><a href="/tags/NEU/" style="font-size: 0.88rem;">NEU<sup>1</sup></a><a href="/tags/PFC5-0/" style="font-size: 0.88rem;">PFC5.0<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/%E5%85%8D%E6%B5%81/" style="font-size: 0.88rem;">免流<sup>1</sup></a><a href="/tags/%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9/" style="font-size: 0.88rem;">单轴压缩<sup>1</sup></a><a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">教程<sup>3</sup></a><a href="/tags/%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F/" style="font-size: 0.88rem;">数值模拟<sup>1</sup></a><a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" style="font-size: 0.88rem;">校园网<sup>1</sup></a><a href="/tags/%E9%A2%84%E7%BA%A6/" style="font-size: 0.88rem;">预约<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 JianFang 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': '1298786483/1298786483.github.io',
+      'data-repo-id': 'R_kgDOQYIj7w',
+      'data-category-id': 'DIC_kwDOQYIj784CyB1e',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },{"data-lang":"zh-CN","data-mapping":"pathname","data-category":null,"data-input-position":null})
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  anzhiyu.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/js/click_show_text.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
