@@ -65,28 +65,7 @@
 
   
   <url>
-    <loc>https://edu-cloud.tech/tags/Python/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://edu-cloud.tech/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://edu-cloud.tech/tags/NEU/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://edu-cloud.tech/tags/%E9%A2%84%E7%BA%A6/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -114,21 +93,7 @@
   </url>
   
   <url>
-    <loc>https://edu-cloud.tech/tags/PFC5-0/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://edu-cloud.tech/tags/%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9/</loc>
-    <lastmod>2025-12-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://edu-cloud.tech/tags/%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F/</loc>
+    <loc>https://edu-cloud.tech/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -155,14 +120,42 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://edu-cloud.tech/categories/%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>https://edu-cloud.tech/tags/Python/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E9%A2%84%E7%BA%A6/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/PFC5-0/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E5%8D%95%E8%BD%B4%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E6%95%B0%E5%80%BC%E6%A8%A1%E6%8B%9F/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
   
   <url>
     <loc>https://edu-cloud.tech/categories/%E7%A1%AC%E6%A0%B8%E6%8A%80%E6%9C%AF/</loc>
@@ -172,14 +165,21 @@
   </url>
   
   <url>
-    <loc>https://edu-cloud.tech/categories/%E7%A7%91%E7%A0%94%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://edu-cloud.tech/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://edu-cloud.tech/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://edu-cloud.tech/categories/%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/categories/%E7%A7%91%E7%A0%94%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
