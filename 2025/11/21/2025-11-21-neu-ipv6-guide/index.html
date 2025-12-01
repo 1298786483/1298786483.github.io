@@ -372,6 +372,7 @@ if (true) {
 </blockquote>
 <p>在 SSH 终端里依次执行（可以一段一段复制）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 更新软件源（等同于“检查更新”）</span></span><br><span class="line">apt update -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 安装 curl 和 sudo 这两个基础组件</span></span><br><span class="line">apt install curl <span class="built_in">sudo</span> -y</span><br></pre></td></tr></table></figure>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2025/11/21/2025-11-21-neu-ipv6-guide/aptupdate.png" class="" title="更新组件">
 
 <h4 id="这两条命令在干嘛？"><a href="#这两条命令在干嘛？" class="headerlink" title="这两条命令在干嘛？"></a>这两条命令在干嘛？</h4><ul>
 <li><p><code>apt update -y</code><br>通知系统：“去看看软件仓库里有什么新版本”。<br><code>-y</code> 的意思是：别每次都问我要不要，<strong>全部自动同意</strong>。</p>
@@ -388,6 +389,7 @@ if (true) {
 <h3 id="4-2-一键安装-Hysteria-2：懒人专属通关路线"><a href="#4-2-一键安装-Hysteria-2：懒人专属通关路线" class="headerlink" title="4.2 一键安装 Hysteria 2：懒人专属通关路线"></a>4.2 一键安装 Hysteria 2：懒人专属通关路线</h3><p>接下来进入本章灵魂部分：<strong>一键脚本</strong>。</p>
 <p>在终端里复制下面这一整行，按回车：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;&amp; bash hysteria.sh</span><br></pre></td></tr></table></figure>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/2025/11/21/2025-11-21-neu-ipv6-guide/Hy.png" class="" title="安装 Hysteria 2">
 
 <h4 id="这行到底做了什么？"><a href="#这行到底做了什么？" class="headerlink" title="这行到底做了什么？"></a>这行到底做了什么？</h4><ul>
 <li>前半段 <code>wget ... hysteria.sh</code>：<br>去 GitHub 把脚本文件下载下来，名字叫 <code>hysteria.sh</code>。</li>
