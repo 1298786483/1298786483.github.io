@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://edu-cloud.tech/2026/03/28/love-story/</loc>
+    <loc>https://edu-cloud.tech/2026/03/28/love_story/</loc>
     
     <lastmod>2026-03-27</lastmod>
     
@@ -164,6 +164,41 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E6%96%B9%E5%81%A5%E5%AD%99%E8%95%BE/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E5%AD%99%E8%95%BE%E6%96%B9%E5%81%A5/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E6%96%B9%E5%81%A5%E5%AD%99%E8%95%BE%E7%9A%84%E6%95%85%E4%BA%8B/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E6%96%B9%E5%81%A5%E5%96%9C%E6%AC%A2%E5%AD%99%E8%95%BE/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/tags/%E5%AD%99%E8%95%BE%E5%96%9C%E6%AC%A2%E6%96%B9%E5%81%A5/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -189,6 +224,13 @@
   
   <url>
     <loc>https://edu-cloud.tech/categories/%E7%A1%AC%E6%A0%B8%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://edu-cloud.tech/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
