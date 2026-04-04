@@ -2,7 +2,7 @@
 (function() {
     var a_idx = 0;
     window.onclick = function(event) {
-        var a = new Array("方健", "孙蕾", "永远相爱", "蕾蕾", "健健", "蕾宝", "贱贱", "Kiss", "纪念");
+        var a = new Array("方健", "孙蕾💖", "永远❤️相爱", "蕾蕾💘", "健健", "蕾宝", "贱贱", "Kiss", "纪念📖");
         
         var heart = document.createElement("b"); // 创建 b 元素
         heart.onselectstart = new Function('event.returnValue=false'); // 防止选中
